@@ -148,6 +148,20 @@ function App() {
                 <h2>About Me</h2>
               </div>
 
+              <div className="about-photo-wrap">
+                <div className="about-photo-frame">
+                  <img
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
+                    alt="Elias Paul"
+                    className="about-photo"
+                  />
+                </div>
+                <div className="about-photo-label">
+                  <span>ELIAS PAUL</span>
+                  <span>DUBAI, UAE</span>
+                </div>
+              </div>
+
               <div className="about-copy">
                 <p className="about-lead">
                   I’m Elias, an Information Technology graduate who enjoys turning
@@ -155,7 +169,7 @@ function App() {
                 </p>
 
                 <p>
-                  I graduated with First Class Honours and a 4.0 GPA, with a strong
+                  I graduated with First Class Honours and a 4.0 CGPA, with a strong
                   academic focus on data analytics, software development, machine
                   learning, and intelligent systems.
                 </p>
@@ -222,7 +236,7 @@ function App() {
                 </div>
 
                 <p className="education-description">
-                  Graduated with First Class Honours and a 4.0 GPA, with
+                  Graduated with First Class Honours and a 4.0 CGPA, with
                   academic work spanning data analytics, machine learning,
                   business intelligence, software development, and web
                   applications.
@@ -511,11 +525,11 @@ function App() {
 
             <div className="contact-header">
               <div className="contact-title-wrap">
-                <p className="contact-eyebrow"></p>
+                <p className="contact-eyebrow">OPEN CHANNEL</p>
 
                 <h2>
                   LET'S
-                  <span>CONNECT</span>
+                  <span>CONNECT.</span>
                 </h2>
               </div>
 
@@ -580,17 +594,17 @@ function App() {
                 <div className="contact-card-arrow">↗</div>
               </a>
 
-            <a
-                href="https://github.com/eliaspaul04"
+              <a
+                href="https://wa.me/971568105920"
                 target="_blank"
                 rel="noreferrer"
                 className="contact-card"
               >
-                <div className="contact-card-index">03</div>
+                <div className="contact-card-index">04</div>
 
                 <div className="contact-card-content">
-                  <span>Mobile Number & WhatsApp</span>
-                  <strong>+971568105920</strong>
+                  <span>MOBILE / WHATSAPP</span>
+                  <strong>+971 56 810 5920</strong>
                 </div>
 
                 <div className="contact-card-arrow">↗</div>

@@ -776,13 +776,65 @@ a {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 80px;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(220px, 0.72fr) minmax(0, 1.25fr);
+  gap: 48px;
   align-items: start;
 }
 
 .about-heading h2 {
   margin-top: 0;
+}
+
+.about-photo-wrap {
+  min-width: 0;
+}
+
+.about-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: #101010;
+}
+
+.about-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.42));
+  pointer-events: none;
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.85) contrast(1.02);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.about-photo-frame:hover .about-photo {
+  transform: scale(1.025);
+  filter: saturate(1) contrast(1.02);
+}
+
+.about-photo-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  color: #555;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+
+.about-photo-label span:last-child {
+  text-align: right;
 }
 
 .about-copy {
@@ -3296,6 +3348,18 @@ footer {
 ========================================================= */
 
 @media (max-width: 1000px) {
+  .about-grid {
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  }
+
+  .about-photo-wrap {
+    grid-column: 1;
+  }
+
+  .about-copy {
+    grid-column: 2;
+  }
+
   .experience-header {
     align-items: flex-start;
     flex-direction: column;
@@ -4499,6 +4563,21 @@ body {
     color: #6aff9d;
   }
 
+.mobile-navigation-cta {
+    margin-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    color: #bdbdbd !important;
+    font-size: 11px !important;
+    letter-spacing: 0.4px;
+  }
+
+  .mobile-navigation-status {
+    color: #6aff9d !important;
+    font-size: 11px !important;
+    letter-spacing: 0 !important;
+  }
+
   /* Keep the background matrix subtle on touch devices. */
   .dot-matrix {
     opacity: 0.48;
@@ -4575,6 +4654,15 @@ body {
 
   .about-grid {
     gap: 28px;
+  }
+
+  .about-photo-wrap {
+    width: min(100%, 320px);
+    margin: 0 auto;
+  }
+
+  .about-photo-frame {
+    border-radius: 16px;
   }
 
   .about-copy {
