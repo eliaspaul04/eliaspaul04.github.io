@@ -579,6 +579,22 @@ function App() {
 
                 <div className="contact-card-arrow">↗</div>
               </a>
+
+            <a
+                href="https://github.com/eliaspaul04"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-card"
+              >
+                <div className="contact-card-index">03</div>
+
+                <div className="contact-card-content">
+                  <span>Mobile Number & WhatsApp</span>
+                  <strong>+971568105920</strong>
+                </div>
+
+                <div className="contact-card-arrow">↗</div>
+              </a>
             </div>
 
             <div className="contact-footer">
