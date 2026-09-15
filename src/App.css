@@ -4828,4 +4828,84 @@ body {
   .contact-title-wrap h2 {
     font-size: 46px;
   }
+
+  /* =========================================================
+   MOBILE FINAL FIX
+   Prevent narrow-column heading layouts on phones
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ABOUT
+     Stack the heading above the content.
+  */
+  .about-section .about-grid {
+    display: block !important;
+    width: 100% !important;
+    grid-template-columns: none !important;
+  }
+
+  .about-section .about-heading {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 0 32px !important;
+  }
+
+  .about-section .about-heading h2 {
+    display: block !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+
+    /* Never allow "About Me" to become:
+       A
+       b
+       o
+       u
+       t
+    */
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+
+    font-size: clamp(48px, 14vw, 64px) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -3px !important;
+  }
+
+  .about-section .about-copy {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  .about-section .about-copy .about-lead {
+    max-width: 100% !important;
+  }
+
+  /* Make the three About metadata items stack cleanly */
+  .about-section .about-meta {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+}
+
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 390px) {
+
+  .about-section .about-heading h2 {
+    font-size: 46px !important;
+    letter-spacing: -2.5px !important;
+  }
+
+  .about-section .about-heading {
+    margin-bottom: 28px !important;
+  }
+}
+
 }
